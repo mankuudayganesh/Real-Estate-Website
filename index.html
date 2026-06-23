@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURELIA | Luxury Real Estate & Premium Estates</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discover Aurelia's curated collection of luxury villas, penthouses, and private estates. Experience high-end living crafted beyond expectations.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">AURELIA<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="properties.html" class="nav-link">Properties</a></li>
+        <li><a href="property-details.html" class="nav-link">Property Details</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-gold" style="padding: 0.7rem 1.5rem; font-size: 0.75rem;">Schedule Call</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" style="background-image: url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span>Curated Masterpieces</span>
+        Discover Luxury Living<br>Beyond Expectations
+      </h1>
+      <p class="hero-subtitle">Premium Properties Crafted For Extraordinary Lifestyles. Designed For The Discerning Elite.</p>
+      <div class="hero-actions">
+        <a href="properties.html" class="btn btn-gold">Explore Properties</a>
+        <a href="contact.html" class="btn btn-outline">Schedule Visit</a>
+      </div>
+    </div>
+    
+    <!-- Hero Stats Section -->
+    <div class="hero-stats stats-trigger">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3 class="counter-val" data-target="250" data-suffix="+">0+</h3>
+            <p>Premium Properties</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="counter-val" data-target="1000" data-suffix="+">0+</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="counter-val" data-target="15" data-suffix="+">0+</h3>
+            <p>Global Cities</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="counter-val" data-target="10" data-suffix="+">0+</h3>
+            <p>Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Properties Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Exquisite Portfolios</span>
+        <h2 class="section-title">Featured Listings</h2>
+        <p class="section-desc">Hand-picked collection of world-class architectural wonders representing the pinnacle of architectural detail and refinement.</p>
+      </div>
+
+      <div class="property-grid">
+        <!-- Property 1 -->
+        <article class="property-card reveal">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Villa Serene">
+            <span class="property-tag">For Sale</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Mansion <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$12,500,000</div>
+              <h3 class="property-title">Villa Serene</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Malibu, California</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 5 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 6 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 8,200 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Property 2 -->
+        <article class="property-card reveal reveal-delay-1">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="The Luminary Penthouse">
+            <span class="property-tag">For Sale</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Penthouse <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$8,400,000</div>
+              <h3 class="property-title">The Luminary Penthouse</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> New York City, NY</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 3 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 3.5 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 4,100 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Property 3 -->
+        <article class="property-card reveal reveal-delay-2">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Grand Horizon Estate">
+            <span class="property-tag">Featured</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Estate <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$15,200,000</div>
+              <h3 class="property-title">Grand Horizon Estate</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Aspen, Colorado</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 6 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 8 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 11,500 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Property 4 -->
+        <article class="property-card reveal">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Opal Bay Residence">
+            <span class="property-tag">For Rent</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Residence <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$35,000/mo</div>
+              <h3 class="property-title">Opal Bay Residence</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Miami, Florida</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 4.5 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 5,500 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Property 5 -->
+        <article class="property-card reveal reveal-delay-1">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="Elysian Villa">
+            <span class="property-tag">Featured</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Villa <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$9,500,000</div>
+              <h3 class="property-title">Elysian Villa</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Santorini, Greece</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 5 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 6,200 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Property 6 -->
+        <article class="property-card reveal reveal-delay-2">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=800&q=80" alt="The Apex Mansion">
+            <span class="property-tag">For Sale</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Mansion <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$18,750,000</div>
+              <h3 class="property-title">The Apex Mansion</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Los Angeles, California</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 7 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 9 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 14,200 sqft</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Unmatched Excellence</span>
+        <h2 class="section-title">Why Partner With Us</h2>
+        <p class="section-desc">Aligning high-net-worth investors and families with bespoke properties that match their refined standards.</p>
+      </div>
+
+      <div class="why-grid">
+        <!-- Card 1 -->
+        <div class="why-card glass-card reveal">
+          <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="why-title">Verified Listings</h3>
+          <p class="why-desc">Rigorous background verification processes and detailed title check reports for each listed transaction.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="why-card glass-card reveal reveal-delay-1">
+          <div class="why-icon"><i class="fa-solid fa-map-pin"></i></div>
+          <h3 class="why-title">Premium Locations</h3>
+          <p class="why-desc">Exquisite properties set in the world's most desirable and economically stable neighborhoods.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="why-card glass-card reveal reveal-delay-2">
+          <div class="why-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3 class="why-title">Secure Investment</h3>
+          <p class="why-desc">High asset value stability and projected capital returns backed by comprehensive market analysis metrics.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="why-card glass-card reveal reveal-delay-3">
+          <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+          <h3 class="why-title">Dedicated Support</h3>
+          <p class="why-desc">Bespoke 24/7 personal concierge support, assisting client walkthroughs, legal briefs, and handovers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Showcase Section -->
+  <section class="video-showcase" style="background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80');">
+    <div class="video-overlay"></div>
+    <div class="video-content reveal">
+      <div class="play-btn" aria-label="Play video showcase"><i class="fa-solid fa-play"></i></div>
+      <h2 class="video-title">Take A Visual Journey Through Luxury Estates</h2>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Client Perspectives</span>
+        <h2 class="section-title">Trusted By Visionaries</h2>
+        <p class="section-desc">What developers, business leaders, and private collectors say about working with our team.</p>
+      </div>
+
+      <div class="testimonial-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card glass-card-light reveal">
+          <div>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="testimonial-text">
+              "Aurelia's curation of premium properties is exceptional. Their attention to confidentiality and white-glove onboarding service made acquiring our estate seamless."
+            </blockquote>
+          </div>
+          <div class="testimonial-client">
+            <img class="client-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Sophia Loren">
+            <div class="client-info">
+              <h4>Sophia Loren</h4>
+              <p>CEO, LuxMedia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card glass-card-light reveal reveal-delay-1">
+          <div>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="testimonial-text">
+              "Their detailed financial projections and location assessment data and reports helped secure our Aspen portfolio. Absolute professionals in premium investments."
+            </blockquote>
+          </div>
+          <div class="testimonial-client">
+            <img class="client-img" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" alt="Alexander Wright">
+            <div class="client-info">
+              <h4>Alexander Wright</h4>
+              <p>Founder, Wright Capital</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card glass-card-light reveal reveal-delay-2">
+          <div>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="testimonial-text">
+              "Finding a Mediterranean retreat with complete privacy and premium architecture seemed difficult. Aurelia sourced a private masterpiece off-market in Santorini."
+            </blockquote>
+          </div>
+          <div class="testimonial-client">
+            <img class="client-img" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova">
+            <div class="client-info">
+              <h4>Elena Rostova</h4>
+              <p>International Investor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action Section -->
+  <section class="cta-section" style="background-image: url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=80');">
+    <div class="cta-overlay"></div>
+    <div class="cta-content reveal">
+      <h2 class="cta-title">Begin Your Journey to Exquisite Living</h2>
+      <p class="cta-desc">Schedule a private digital walkthrough session or an in-person viewing reservation with a luxury real estate director.</p>
+      <a href="contact.html" class="btn btn-gold">Book Private Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1 -->
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo">AURELIA<span>.</span></a>
+          <p class="footer-desc">Curating world-class residential masterpieces and luxury villas for high-net-worth clients globally. Experience refined real estate consultancy.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
+          <h3>Contact Details</h3>
+          <ul class="footer-links">
+            <li><span style="font-weight:300;"><i class="fa-solid fa-phone text-gold" style="margin-right:10px;"></i> +1 (800) 900-5000</span></li>
+            <li><span style="font-weight:300;"><i class="fa-solid fa-envelope text-gold" style="margin-right:10px;"></i> private@aurelia.com</span></li>
+            <li><span style="font-weight:300;"><i class="fa-solid fa-location-dot text-gold" style="margin-right:10px;"></i> Fifth Ave, New York</span></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p class="footer-desc" style="margin-bottom:1.25rem;">Subscribe to receive exclusive access to off-market private villa listings.</p>
+          <form class="newsletter-form">
+            <input class="newsletter-input" type="email" placeholder="Your Email Address" aria-label="Newsletter email input" required>
+            <button class="newsletter-btn" type="submit" aria-label="Subscribe to newsletter"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AURELIA Luxury Real Estate. All rights reserved.</p>
+        <p>Designed by Elite Agency</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

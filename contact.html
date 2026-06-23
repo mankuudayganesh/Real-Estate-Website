@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | AURELIA Luxury Real Estate</title>
+  <meta name="description" content="Reach out to Aurelia Luxury Real Estate. Schedule a private consultation, list your property, or connect with our international Mayfair, Manhattan, and Dubai office directors.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">AURELIA<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="properties.html" class="nav-link">Properties</a></li>
+        <li><a href="property-details.html" class="nav-link">Property Details</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-gold" style="padding: 0.7rem 1.5rem; font-size: 0.75rem;">Schedule Call</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero Banner -->
+  <header class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1600&q=80');">
+    <div class="hero-overlay"></div>
+    <div class="page-hero-content reveal">
+      <h1 class="page-hero-title">Connect With Us</h1>
+      <div class="page-hero-breadcrumbs">
+        <a href="index.html">Home</a> &nbsp;/&nbsp; Contact
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Form & Info Grid -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="contact-container">
+        
+        <!-- Left Column: Details -->
+        <div class="contact-info-col reveal">
+          <span class="section-subtitle">Direct Channels</span>
+          <h2 class="section-title" style="color: var(--primary); margin-bottom: 2rem;">Initiate a Consultation</h2>
+          <p class="section-desc" style="color: var(--text-gray); margin-bottom: 3.5rem; font-weight:300;">Fill in your specifications or reach out directly via secure phone channels. Our acquisitions directors coordinate briefings under strict non-disclosure terms.</p>
+
+          <div class="contact-details">
+            <!-- Item 1 -->
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-info-text">
+                <h4>Private Telephone</h4>
+                <p>+1 (800) 900-5000 (US Toll-Free)</p>
+                <p>+971 (4) 300-8000 (Dubai Office)</p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-info-text">
+                <h4>Secure Email</h4>
+                <p>private@aurelia.com (General Acquisitions)</p>
+                <p>directors@aurelia.com (Executive Board)</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="contact-info-text">
+                <h4>Office Hours</h4>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM (Local Time)</p>
+                <p>Weekend viewings available via prior appointment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Form -->
+        <div class="contact-form-wrapper reveal reveal-delay-1">
+          <h3 class="form-title">Consultation Request</h3>
+          <p class="form-desc">Complete the parameters below to schedule a private briefing session.</p>
+          
+          <div class="form-success-popup" id="form-success">
+            Thank you. Your consultation request has been submitted. An acquisitions director will contact you within 24 hours.
+          </div>
+
+          <form id="contact-form" novalidate>
+            <!-- Name -->
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder=" " required>
+              <label for="name" class="form-label">Full Name</label>
+              <div class="form-error" id="name-error"></div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder=" " required>
+              <label for="email" class="form-label">Email Address</label>
+              <div class="form-error" id="email-error"></div>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+              <input type="tel" id="phone" class="form-control" placeholder=" " required>
+              <label for="phone" class="form-label">Telephone Number</label>
+              <div class="form-error" id="phone-error"></div>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <textarea id="message" class="form-control" rows="4" placeholder=" " required style="resize:none;"></textarea>
+              <label for="message" class="form-label">Portfolio Specifications / Message</label>
+              <div class="form-error" id="message-error"></div>
+            </div>
+
+            <button type="submit" class="btn btn-gold" style="width: 100%;">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Luxury Map Section -->
+  <section class="section section-dark" style="padding: 0;">
+    <div class="map-placeholder reveal">
+      <svg class="map-svg-bg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+        <!-- coordinate grid lines -->
+        <line x1="0" y1="100" x2="1000" y2="100" />
+        <line x1="0" y1="200" x2="1000" y2="200" />
+        <line x1="0" y1="300" x2="1000" y2="300" />
+        <line x1="0" y1="400" x2="1000" y2="400" />
+        <line x1="200" y1="0" x2="200" y2="500" />
+        <line x1="400" y1="0" x2="400" y2="500" />
+        <line x1="600" y1="0" x2="600" y2="500" />
+        <line x1="800" y1="0" x2="800" y2="500" />
+        
+        <!-- NYC Ping -->
+        <circle cx="250" cy="180" r="5" fill="#D4AF37" />
+        <circle cx="250" cy="180" r="12" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.6">
+          <animate attributeName="r" values="5;20" dur="2.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;0" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- London Ping -->
+        <circle cx="480" cy="140" r="5" fill="#D4AF37" />
+        <circle cx="480" cy="140" r="12" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.6">
+          <animate attributeName="r" values="5;20" dur="2.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;0" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Dubai Ping -->
+        <circle cx="680" cy="240" r="5" fill="#D4AF37" />
+        <circle cx="680" cy="240" r="12" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.6">
+          <animate attributeName="r" values="5;20" dur="2.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;0" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+      
+      <div class="map-card">
+        <div class="map-card-icon"><i class="fa-solid fa-earth-americas"></i></div>
+        <h3>Aurelia Global Network</h3>
+        <p>Connecting international capitals through private acquisitions channels. Our teams are globally coordinated.</p>
+        <a href="#locations" class="btn btn-gold" style="font-size:0.75rem; padding:0.75rem 1.5rem;">Explore Offices</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Office Locations Section -->
+  <section class="section section-light" id="locations">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Local Hubs</span>
+        <h2 class="section-title">Our Office Locations</h2>
+        <p class="section-desc">Connect with our localized acquisitions desks directly in major financial and real estate capital centers.</p>
+      </div>
+
+      <div class="office-grid">
+        <!-- Office 1 -->
+        <div class="office-card reveal">
+          <h3 class="office-location-title">New York</h3>
+          <p class="office-city">Manhattan, USA</p>
+          <div class="office-details">
+            <p>Fifth Ave Office Complex, Floor 35</p>
+            <p>New York, NY 10019</p>
+            <p style="margin-top:1rem; font-weight:400;"><i class="fa-solid fa-phone text-gold"></i> +1 (800) 900-5000</p>
+          </div>
+        </div>
+
+        <!-- Office 2 -->
+        <div class="office-card reveal reveal-delay-1">
+          <h3 class="office-location-title">London</h3>
+          <p class="office-city">Mayfair, UK</p>
+          <div class="office-details">
+            <p>12 Bruton Place, Mayfair</p>
+            <p>London W1J 6JD</p>
+            <p style="margin-top:1rem; font-weight:400;"><i class="fa-solid fa-phone text-gold"></i> +44 (20) 7946-0900</p>
+          </div>
+        </div>
+
+        <!-- Office 3 -->
+        <div class="office-card reveal reveal-delay-2">
+          <h3 class="office-location-title">Dubai</h3>
+          <p class="office-city">Marina District, UAE</p>
+          <div class="office-details">
+            <p>Aurelia Tower, Marina Heights Level 42</p>
+            <p>Dubai, United Arab Emirates</p>
+            <p style="margin-top:1rem; font-weight:400;"><i class="fa-solid fa-phone text-gold"></i> +971 (4) 300-8000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1 -->
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo">AURELIA<span>.</span></a>
+          <p class="footer-desc">Curating world-class residential masterpieces and luxury villas for high-net-worth clients globally. Experience refined real estate consultancy.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
+          <h3>Contact Details</h3>
+          <ul class="footer-links">
+            <li><span style="font-weight:300;"><i class="fa-solid fa-phone text-gold" style="margin-right:10px;"></i> +1 (800) 900-5000</span></li>
+            <li><span style="font-weight:300;"><i class="fa-solid fa-envelope text-gold" style="margin-right:10px;"></i> private@aurelia.com</span></li>
+            <li><span style="font-weight:300;"><i class="fa-solid fa-location-dot text-gold" style="margin-right:10px;"></i> Fifth Ave, New York</span></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p class="footer-desc" style="margin-bottom:1.25rem;">Subscribe to receive exclusive access to off-market private villa listings.</p>
+          <form class="newsletter-form">
+            <input class="newsletter-input" type="email" placeholder="Your Email Address" aria-label="Newsletter email input" required>
+            <button class="newsletter-btn" type="submit" aria-label="Subscribe to newsletter"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AURELIA Luxury Real Estate. All rights reserved.</p>
+        <p>Designed by Elite Agency</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

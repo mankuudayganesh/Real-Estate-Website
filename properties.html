@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Properties Portfolio | AURELIA Luxury Real Estate</title>
+  <meta name="description" content="Browse our premier real estate listings. Use our luxury property filters to find villas, penthouses, and private estates that match your criteria.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">AURELIA<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="properties.html" class="nav-link active">Properties</a></li>
+        <li><a href="property-details.html" class="nav-link">Property Details</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-gold" style="padding: 0.7rem 1.5rem; font-size: 0.75rem;">Schedule Call</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero Banner -->
+  <header class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');">
+    <div class="hero-overlay"></div>
+    <div class="page-hero-content reveal">
+      <h1 class="page-hero-title">Premium Portfolio</h1>
+      <div class="page-hero-breadcrumbs">
+        <a href="index.html">Home</a> &nbsp;/&nbsp; Properties
+      </div>
+    </div>
+  </header>
+
+  <!-- Properties & Filters Section -->
+  <section class="section section-light" style="padding-top: 0;">
+    <div class="container">
+      
+      <!-- Filters Box -->
+      <div class="filters-wrapper reveal">
+        <form class="filters-form" id="filter-form">
+          <div class="filter-group">
+            <label for="search-input">Search Keywords</label>
+            <input type="text" id="search-input" class="filter-input" placeholder="e.g. Mansion, Villa...">
+          </div>
+          <div class="filter-group">
+            <label for="filter-location">Location</label>
+            <select id="filter-location" class="filter-input filter-select">
+              <option value="">All Locations</option>
+              <option value="Malibu">Malibu, USA</option>
+              <option value="New-York">New York City, USA</option>
+              <option value="Aspen">Aspen, USA</option>
+              <option value="Miami">Miami, USA</option>
+              <option value="Santorini">Santorini, Greece</option>
+              <option value="Los-Angeles">Los Angeles, USA</option>
+              <option value="London">London, UK</option>
+              <option value="Paris">Paris, France</option>
+              <option value="Dubai">Dubai, UAE</option>
+              <option value="San-Francisco">San Francisco, USA</option>
+              <option value="Istanbul">Istanbul, Turkey</option>
+              <option value="Maui">Maui, Hawaii</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-type">Property Type</label>
+            <select id="filter-type" class="filter-input filter-select">
+              <option value="">All Types</option>
+              <option value="Villa">Villa</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Penthouse">Penthouse</option>
+              <option value="Mansion">Mansion</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-budget">Max Budget</label>
+            <select id="filter-budget" class="filter-input filter-select">
+              <option value="">Unlimited</option>
+              <option value="6000000">Up to $6M</option>
+              <option value="10000000">Up to $10M</option>
+              <option value="15000000">Up to $15M</option>
+              <option value="20000000">Up to $20M</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-beds">Bedrooms</label>
+            <select id="filter-beds" class="filter-input filter-select">
+              <option value="">Any Beds</option>
+              <option value="2">2 Bedrooms</option>
+              <option value="3">3 Bedrooms</option>
+              <option value="4">4 Bedrooms</option>
+              <option value="5">5+ Bedrooms</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <!-- Section Title inside results -->
+      <div class="section-header reveal" style="margin-top: 6rem; margin-bottom: 3rem;">
+        <span class="section-subtitle">Exquisite Residences</span>
+        <h2 class="section-title" style="font-size: 2.5rem;">Explore Available Estates</h2>
+      </div>
+
+      <!-- No Match Message -->
+      <div id="no-properties-message" style="display: none; text-align: center; padding: 4rem 0; font-family: var(--font-headings); font-size: 1.8rem; color: var(--text-gray);">
+        No properties found matching your selection criteria.
+      </div>
+
+      <!-- Property Grid (12 Items) -->
+      <div class="property-grid">
+        
+        <!-- Card 1 -->
+        <article class="property-card reveal" data-location="Malibu" data-type="Villa" data-price="12500000" data-beds="5">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Villa Serene">
+            <span class="property-tag">For Sale</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Mansion <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$12,500,000</div>
+              <h3 class="property-title">Villa Serene</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Malibu, California</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 5 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 6 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 8,200 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="property-card reveal reveal-delay-1" data-location="New-York" data-type="Penthouse" data-price="8400000" data-beds="3">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="The Luminary Penthouse">
+            <span class="property-tag">For Sale</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Penthouse <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$8,400,000</div>
+              <h3 class="property-title">The Luminary Penthouse</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> New York City, NY</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 3 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 3.5 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 4,100 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="property-card reveal reveal-delay-2" data-location="Aspen" data-type="Villa" data-price="15200000" data-beds="6">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Grand Horizon Estate">
+            <span class="property-tag">Featured</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Estate <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$15,200,000</div>
+              <h3 class="property-title">Grand Horizon Estate</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Aspen, Colorado</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 6 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 8 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 11,500 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="property-card reveal" data-location="Miami" data-type="Apartment" data-price="6900000" data-beds="4">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Opal Bay Residence">
+            <span class="property-tag">For Rent</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Residence <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$6,900,000</div>
+              <h3 class="property-title">Opal Bay Residence</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Miami, Florida</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 4.5 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 5,500 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="property-card reveal reveal-delay-1" data-location="Santorini" data-type="Villa" data-price="9500000" data-beds="4">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="Elysian Villa">
+            <span class="property-tag">Featured</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Villa <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$9,500,000</div>
+              <h3 class="property-title">Elysian Villa</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Santorini, Greece</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 5 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 6,200 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="property-card reveal reveal-delay-2" data-location="Los-Angeles" data-type="Mansion" data-price="18750000" data-beds="7">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=800&q=80" alt="The Apex Mansion">
+            <span class="property-tag">For Sale</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Mansion <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$18,750,000</div>
+              <h3 class="property-title">The Apex Mansion</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Los Angeles, California</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 7 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 9 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 14,200 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="property-card reveal" data-location="London" data-type="Apartment" data-price="5200000" data-beds="2">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80" alt="Skyline Terrace Apartment">
+            <span class="property-tag">For Rent</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Apartment <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$5,200,000</div>
+              <h3 class="property-title">Skyline Terrace Apartment</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> London, UK</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 2 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 2.5 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 2,800 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="property-card reveal reveal-delay-1" data-location="Paris" data-type="Mansion" data-price="14000000" data-beds="6">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=80" alt="La Belle Epoque Mansion">
+            <span class="property-tag">For Sale</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Mansion <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$14,000,000</div>
+              <h3 class="property-title">La Belle Epoque Mansion</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Paris, France</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 6 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 7 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 9,800 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="property-card reveal reveal-delay-2" data-location="Dubai" data-type="Penthouse" data-price="7800000" data-beds="3">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=800&q=80" alt="Dubai Marina Heights">
+            <span class="property-tag">Featured</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Penthouse <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$7,800,000</div>
+              <h3 class="property-title">Dubai Marina Heights</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Dubai, UAE</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 3 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 4 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 4,500 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 10 -->
+        <article class="property-card reveal" data-location="San-Francisco" data-type="Villa" data-price="11200000" data-beds="5">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Pacific View Sanctuary">
+            <span class="property-tag">For Sale</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Villa <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$11,200,000</div>
+              <h3 class="property-title">Pacific View Sanctuary</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> San Francisco, California</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 5 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 5.5 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 7,200 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 11 -->
+        <article class="property-card reveal reveal-delay-1" data-location="Istanbul" data-type="Mansion" data-price="13500000" data-beds="6">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Bosphorus Manor">
+            <span class="property-tag">For Sale</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Mansion <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$13,500,000</div>
+              <h3 class="property-title">Bosphorus Manor</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Istanbul, Turkey</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 6 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 7.5 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 10,500 sqft</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 12 -->
+        <article class="property-card reveal reveal-delay-2" data-location="Maui" data-type="Villa" data-price="10800000" data-beds="4">
+          <div class="property-image-container">
+            <img class="property-image" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Ocean Whisper Villa">
+            <span class="property-tag">Featured</span>
+            <div class="property-details-btn">
+              <a href="property-details.html" class="btn-link">View Villa <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="property-info">
+            <div>
+              <div class="property-price">$10,800,000</div>
+              <h3 class="property-title">Ocean Whisper Villa</h3>
+              <p class="property-location"><i class="fa-solid fa-location-dot"></i> Maui, Hawaii</p>
+            </div>
+            <div class="property-specs">
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+              <div class="spec-item"><i class="fa-solid fa-bath"></i> 5 Baths</div>
+              <div class="spec-item"><i class="fa-solid fa-maximize"></i> 6,800 sqft</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Investment Opportunities Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Capital Growth</span>
+        <h2 class="section-title">Investment Opportunities</h2>
+        <p class="section-desc">Acquire equity in premier global construction and development plans optimized for long-term rental income yield and valuation appreciation.</p>
+      </div>
+
+      <!-- Horizontal Card 1 -->
+      <div class="investment-card reveal">
+        <div class="investment-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Bosphorus Waterfront Complex">
+        </div>
+        <div class="investment-content">
+          <div class="roi-badge">8.5% Annual ROI</div>
+          <span class="investment-tag">Bosphorus Shoreline</span>
+          <h3 class="investment-title">Bosphorus Waterfront Complex</h3>
+          <p class="investment-desc">Acquire premium units with pre-sales discount structures in Istanbul's high-appreciation waterfront zoning sector. Features fully private marinas and absolute concierge servicing.</p>
+          <div class="investment-meta">
+            <div class="meta-block">
+              <h4>$1,200,000</h4>
+              <p>Starting Price</p>
+            </div>
+            <div class="meta-block">
+              <h4>12% YoY</h4>
+              <p>Capital Appreciation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Horizontal Card 2 -->
+      <div class="investment-card reveal">
+        <div class="investment-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=800&q=80" alt="Dubai Marina Residence Phase II">
+        </div>
+        <div class="investment-content">
+          <div class="roi-badge">9.2% Net Yield</div>
+          <span class="investment-tag">Dubai Marina District</span>
+          <h3 class="investment-title">Dubai Marina Residence Phase II</h3>
+          <p class="investment-desc">A premium luxury development offering completely tax-free rental income pools and eligible state residency visa qualifications for international asset collectors.</p>
+          <div class="investment-meta">
+            <div class="meta-block">
+              <h4>$1,850,000</h4>
+              <p>Starting Price</p>
+            </div>
+            <div class="meta-block">
+              <h4>Tax-Free</h4>
+              <p>Rental Income</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1 -->
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo">AURELIA<span>.</span></a>
+          <p class="footer-desc">Curating world-class residential masterpieces and luxury villas for high-net-worth clients globally. Experience refined real estate consultancy.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
+          <h3>Contact Details</h3>
+          <ul class="footer-links">
+            <li><span style="font-weight:300;"><i class="fa-solid fa-phone text-gold" style="margin-right:10px;"></i> +1 (800) 900-5000</span></li>
+            <li><span style="font-weight:300;"><i class="fa-solid fa-envelope text-gold" style="margin-right:10px;"></i> private@aurelia.com</span></li>
+            <li><span style="font-weight:300;"><i class="fa-solid fa-location-dot text-gold" style="margin-right:10px;"></i> Fifth Ave, New York</span></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p class="footer-desc" style="margin-bottom:1.25rem;">Subscribe to receive exclusive access to off-market private villa listings.</p>
+          <form class="newsletter-form">
+            <input class="newsletter-input" type="email" placeholder="Your Email Address" aria-label="Newsletter email input" required>
+            <button class="newsletter-btn" type="submit" aria-label="Subscribe to newsletter"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AURELIA Luxury Real Estate. All rights reserved.</p>
+        <p>Designed by Elite Agency</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

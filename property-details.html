@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Serene | AURELIA Luxury Estates</title>
+  <meta name="description" content="View comprehensive details, high-resolution media gallery, architectural floor plans, and amenities for Villa Serene in Malibu, California.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">AURELIA<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="properties.html" class="nav-link">Properties</a></li>
+        <li><a href="property-details.html" class="nav-link active">Property Details</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-gold" style="padding: 0.7rem 1.5rem; font-size: 0.75rem;">Schedule Call</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Space (Push down for scrolled navbar) -->
+  <main style="padding-top: 100px; background-color: var(--primary);">
+    <div class="container" style="padding-top: 3rem;">
+      
+      <!-- Gallery Section -->
+      <section class="gallery-wrapper reveal">
+        <!-- Main Frame -->
+        <div class="gallery-main">
+          <img id="gallery-main-img" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80" alt="Villa Serene Main Pool View">
+        </div>
+        <!-- Thumbnails (5 Items) -->
+        <div class="gallery-thumbs">
+          <div class="gallery-thumb-item active" data-src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=400&q=80" alt="Exterior Pool View">
+          </div>
+          <div class="gallery-thumb-item" data-src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" alt="Villa Facade">
+          </div>
+          <div class="gallery-thumb-item" data-src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=400&q=80" alt="Luxury Living Room">
+          </div>
+          <div class="gallery-thumb-item" data-src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=400&q=80" alt="Modern Master Bedroom">
+          </div>
+          <div class="gallery-thumb-item" data-src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=400&q=80" alt="Sunset Rear Terrace">
+          </div>
+        </div>
+      </section>
+
+      <!-- Details Container (Split Content & Sidebar) -->
+      <div class="details-container">
+        
+        <!-- Left Side: Property Information & Tabs -->
+        <div class="details-content reveal">
+          <!-- Header -->
+          <div class="details-header">
+            <div class="details-location"><i class="fa-solid fa-location-dot"></i> Malibu, California</div>
+            <h1 class="details-title">Villa Serene</h1>
+            <div class="details-price-tag">$12,500,000</div>
+          </div>
+
+          <!-- Tabs Navigation -->
+          <div class="tabs-nav">
+            <button class="tab-btn active" data-tab="tab-overview">Overview</button>
+            <button class="tab-btn" data-tab="tab-amenities">Amenities</button>
+            <button class="tab-btn" data-tab="tab-location">Location</button>
+            <button class="tab-btn" data-tab="tab-floorplan">Floor Plan</button>
+          </div>
+
+          <!-- Tab Pane 1: Overview -->
+          <div class="tab-content active" id="tab-overview">
+            <div class="overview-grid">
+              <div class="overview-item">
+                <span>Bedrooms</span>
+                <span>5 Beds</span>
+              </div>
+              <div class="overview-item">
+                <span>Bathrooms</span>
+                <span>6 Baths</span>
+              </div>
+              <div class="overview-item">
+                <span>Area</span>
+                <span>8,200 sqft</span>
+              </div>
+              <div class="overview-item">
+                <span>Garage</span>
+                <span>3 Cars</span>
+              </div>
+              <div class="overview-item">
+                <span>Built Year</span>
+                <span>2024</span>
+              </div>
+              <div class="overview-item">
+                <span>Property Type</span>
+                <span>Villa</span>
+              </div>
+            </div>
+            <div class="text-block">
+              <p>Perched on a premium bluff overlooking the majestic Pacific Ocean, Villa Serene stands as a definitive architectural masterpiece. Designed by renowned luxury home creators, this estate blends raw modern geometry with fluid transitions between indoor comfort and sweeping outdoor ocean scenery.</p>
+              <p>The ground level includes double-height ceilings, a floor-to-ceiling glass wall facade that slides open seamlessly, a state-of-the-art designer kitchen fitted with Gaggenau suites, and custom travertine stone fireplaces. A private elevator accesses the upper suites, including a primary bedroom retreat equipped with custom oak cabinetry, a private wellness bath, and a private sunset deck.</p>
+            </div>
+          </div>
+
+          <!-- Tab Pane 2: Amenities -->
+          <div class="tab-content" id="tab-amenities">
+            <div class="text-block" style="margin-bottom: 2rem;">
+              <p>This premium residence features top-tier amenities that meet the quality standards of high-net-worth property owners.</p>
+            </div>
+            <div class="amenities-list">
+              <div class="amenity-item"><i class="fa-solid fa-water"></i> Private Infinity Pool</div>
+              <div class="amenity-item"><i class="fa-solid fa-bolt"></i> Crestron Home Automation</div>
+              <div class="amenity-item"><i class="fa-solid fa-wine-glass"></i> Temperature-Controlled Cellar</div>
+              <div class="amenity-item"><i class="fa-solid fa-spa"></i> Sauna & Wellness Room</div>
+              <div class="amenity-item"><i class="fa-solid fa-film"></i> Soundproof Cinema Lounge</div>
+              <div class="amenity-item"><i class="fa-solid fa-shield"></i> Advanced Security Network</div>
+              <div class="amenity-item"><i class="fa-solid fa-kitchen-set"></i> Professional Butler's Pantry</div>
+              <div class="amenity-item"><i class="fa-solid fa-helicopter"></i> Helicopter Landing Access</div>
+            </div>
+          </div>
+
+          <!-- Tab Pane 3: Location -->
+          <div class="tab-content" id="tab-location">
+            <div class="text-block">
+              <p><strong>Zoning & Proximity:</strong> Located in Malibu's exclusive beachfront community, Villa Serene offers absolute privacy with close access to top amenities.</p>
+              <p>Our concierge associates can coordinate private access permissions to nearby private beach clubs and yacht docking facilities. Los Angeles International Airport (LAX) is reachable in 35 minutes via helicopter or 55 minutes via coastal motorway.</p>
+              <ul style="list-style: disc; padding-left: 1.5rem; margin-top: 1rem; line-height: 1.8; font-weight:300;">
+                <li>Malibu Private Marina - 8 mins drive</li>
+                <li>Exclusive Oceanfront Dining Districts - 5 mins drive</li>
+                <li>Private Aviation Heliport - 12 mins flight connection</li>
+                <li>Top International Academies - 15 mins drive</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tab Pane 4: Floor Plan -->
+          <div class="tab-content" id="tab-floorplan">
+            <div class="text-block" style="margin-bottom: 2rem;">
+              <p>Architectural layout drawings for the dual-level villa. Main floor plans show the master suite, pool terrace alignments, and subterranean service access.</p>
+            </div>
+            <img class="floorplan-img" src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="Villa Serene Floor Plan Drawing">
+          </div>
+        </div>
+
+        <!-- Right Side: Sidebar Agent Card -->
+        <aside class="sidebar-card reveal reveal-delay-1">
+          <img class="agent-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="Richard Sterling">
+          <h3 class="agent-name">Richard Sterling</h3>
+          <p class="agent-title">Director of Luxury Sales</p>
+          
+          <div class="agent-contacts">
+            <div class="agent-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+1 (800) 900-5050</span>
+            </div>
+            <div class="agent-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>sterling@aurelia.com</span>
+            </div>
+            <div class="agent-contact-item">
+              <i class="fa-solid fa-award"></i>
+              <span>15+ Years Experience</span>
+            </div>
+          </div>
+          
+          <a href="contact.html" class="btn btn-gold btn-agent-contact">Request Private Show</a>
+        </aside>
+      </div>
+
+      <!-- Similar Properties Section -->
+      <section class="section section-light" style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 4rem;">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Aurelia Curation</span>
+          <h2 class="section-title">Similar Luxury Estates</h2>
+        </div>
+        
+        <div class="property-grid">
+          <!-- Card 1 -->
+          <article class="property-card reveal" data-location="New-York" data-type="Penthouse" data-price="8400000" data-beds="3">
+            <div class="property-image-container">
+              <img class="property-image" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="The Luminary Penthouse">
+              <span class="property-tag">For Sale</span>
+              <div class="property-details-btn">
+                <a href="property-details.html" class="btn-link">View Penthouse <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="property-info">
+              <div>
+                <div class="property-price">$8,400,000</div>
+                <h3 class="property-title">The Luminary Penthouse</h3>
+                <p class="property-location"><i class="fa-solid fa-location-dot"></i> New York City, NY</p>
+              </div>
+              <div class="property-specs">
+                <div class="spec-item"><i class="fa-solid fa-bed"></i> 3 Beds</div>
+                <div class="spec-item"><i class="fa-solid fa-bath"></i> 3.5 Baths</div>
+                <div class="spec-item"><i class="fa-solid fa-maximize"></i> 4,100 sqft</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="property-card reveal reveal-delay-1" data-location="Aspen" data-type="Villa" data-price="15200000" data-beds="6">
+            <div class="property-image-container">
+              <img class="property-image" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Grand Horizon Estate">
+              <span class="property-tag">Featured</span>
+              <div class="property-details-btn">
+                <a href="property-details.html" class="btn-link">View Estate <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="property-info">
+              <div>
+                <div class="property-price">$15,200,000</div>
+                <h3 class="property-title">Grand Horizon Estate</h3>
+                <p class="property-location"><i class="fa-solid fa-location-dot"></i> Aspen, Colorado</p>
+              </div>
+              <div class="property-specs">
+                <div class="spec-item"><i class="fa-solid fa-bed"></i> 6 Beds</div>
+                <div class="spec-item"><i class="fa-solid fa-bath"></i> 8 Baths</div>
+                <div class="spec-item"><i class="fa-solid fa-maximize"></i> 11,500 sqft</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="property-card reveal reveal-delay-2" data-location="Miami" data-type="Apartment" data-price="6900000" data-beds="4">
+            <div class="property-image-container">
+              <img class="property-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Opal Bay Residence">
+              <span class="property-tag">For Rent</span>
+              <div class="property-details-btn">
+                <a href="property-details.html" class="btn-link">View Residence <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="property-info">
+              <div>
+                <div class="property-price">$6,900,000</div>
+                <h3 class="property-title">Opal Bay Residence</h3>
+                <p class="property-location"><i class="fa-solid fa-location-dot"></i> Miami, Florida</p>
+              </div>
+              <div class="property-specs">
+                <div class="spec-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+                <div class="spec-item"><i class="fa-solid fa-bath"></i> 4.5 Baths</div>
+                <div class="spec-item"><i class="fa-solid fa-maximize"></i> 5,500 sqft</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="property-card reveal reveal-delay-3" data-location="Santorini" data-type="Villa" data-price="9500000" data-beds="4">
+            <div class="property-image-container">
+              <img class="property-image" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="Elysian Villa">
+              <span class="property-tag">Featured</span>
+              <div class="property-details-btn">
+                <a href="property-details.html" class="btn-link">View Villa <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="property-info">
+              <div>
+                <div class="property-price">$9,500,000</div>
+                <h3 class="property-title">Elysian Villa</h3>
+                <p class="property-location"><i class="fa-solid fa-location-dot"></i> Santorini, Greece</p>
+              </div>
+              <div class="property-specs">
+                <div class="spec-item"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+                <div class="spec-item"><i class="fa-solid fa-bath"></i> 5 Baths</div>
+                <div class="spec-item"><i class="fa-solid fa-maximize"></i> 6,200 sqft</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1 -->
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo">AURELIA<span>.</span></a>
+          <p class="footer-desc">Curating world-class residential masterpieces and luxury villas for high-net-worth clients globally. Experience refined real estate consultancy.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
+          <h3>Contact Details</h3>
+          <ul class="footer-links">
+            <li><span style="font-weight:300;"><i class="fa-solid fa-phone text-gold" style="margin-right:10px;"></i> +1 (800) 900-5000</span></li>
+            <li><span style="font-weight:300;"><i class="fa-solid fa-envelope text-gold" style="margin-right:10px;"></i> private@aurelia.com</span></li>
+            <li><span style="font-weight:300;"><i class="fa-solid fa-location-dot text-gold" style="margin-right:10px;"></i> Fifth Ave, New York</span></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p class="footer-desc" style="margin-bottom:1.25rem;">Subscribe to receive exclusive access to off-market private villa listings.</p>
+          <form class="newsletter-form">
+            <input class="newsletter-input" type="email" placeholder="Your Email Address" aria-label="Newsletter email input" required>
+            <button class="newsletter-btn" type="submit" aria-label="Subscribe to newsletter"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AURELIA Luxury Real Estate. All rights reserved.</p>
+        <p>Designed by Elite Agency</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
