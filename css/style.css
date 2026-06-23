@@ -2509,29 +2509,45 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column !important;
     justify-content: center !important;
     height: 100vh !important;
-    min-height: 600px !important;
+    min-height: 640px !important;
     padding: 0 !important;
     position: relative !important;
     overflow: hidden !important;
   }
   .hero-content {
     flex-grow: 0 !important;
-    margin-bottom: 105px !important; /* Space for absolute floating stats on mobile */
-    padding: 0 1.5rem !important;
+    margin-bottom: 85px !important; /* Space for absolute floating stats on mobile */
+    padding: 0 1.25rem !important;
     width: 100% !important;
     z-index: 2 !important;
   }
   .hero-title {
-    margin-bottom: 0.85rem !important;
-    font-size: 2.5rem !important;
+    margin-bottom: 0.75rem !important;
+    font-size: 2.25rem !important;
+    line-height: 1.25 !important;
+  }
+  .hero-title span {
+    margin-bottom: 0.5rem !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 4px !important;
   }
   .hero-subtitle {
-    margin-bottom: 1.75rem !important;
-    font-size: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+  }
+  .hero-actions {
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 1rem !important;
   }
   .btn {
-    padding: 0.85rem 1.75rem !important;
-    font-size: 0.8rem !important;
+    padding: 0.8rem 1.25rem !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 1px !important;
+    flex: 1 !important;
+    max-width: 155px !important;
+    white-space: nowrap !important;
   }
   .hero-stats {
     position: absolute !important;
@@ -2543,17 +2559,17 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-    padding: 1.25rem 0 !important;
+    padding: 0.75rem 0 !important;
   }
   .stats-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.25rem 1rem !important;
+    gap: 0.75rem 1rem !important;
   }
   .stat-item h3 {
-    font-size: 1.7rem !important;
+    font-size: 1.6rem !important;
   }
   .stat-item p {
-    font-size: 0.7rem !important;
+    font-size: 0.65rem !important;
     letter-spacing: 1px !important;
   }
 
