@@ -42,21 +42,29 @@ function initMobileMenu() {
 
   if (!hamburger || !navLinks) return;
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-    
-    // Prevent background scrolling when menu is open
-    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
-  });
+  // Dynamically inject the mobile menu backdrop overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  document.body.appendChild(overlay);
+
+  const toggleMenu = (forceClose = false) => {
+    const isCurrentlyActive = hamburger.classList.contains('active');
+    const shouldActive = forceClose ? false : !isCurrentlyActive;
+
+    hamburger.classList.toggle('active', shouldActive);
+    navLinks.classList.toggle('active', shouldActive);
+    overlay.classList.toggle('active', shouldActive);
+
+    // Prevent page scroll behind the slide-out menu
+    document.body.style.overflow = shouldActive ? 'hidden' : 'auto';
+  };
+
+  hamburger.addEventListener('click', () => toggleMenu());
+  overlay.addEventListener('click', () => toggleMenu(true));
 
   // Close menu when links are clicked
   links.forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    });
+    link.addEventListener('click', () => toggleMenu(true));
   });
 }
 

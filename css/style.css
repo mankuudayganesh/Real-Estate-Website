@@ -2475,3 +2475,148 @@ h1, h2, h3, h4, h5, h6 {
 .reveal-delay-3 {
   transition-delay: 0.45s;
 }
+
+/* ==========================================
+   MOBILE & TOUCH COMPATIBILITY OVERRIDES
+   ========================================== */
+@media (max-width: 1024px) {
+  /* Fix iOS Parallax Zoom/Stretching issues */
+  .hero, .page-hero, .video-showcase, .cta-section {
+    background-attachment: scroll !important;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Detail Page Sidebar stack adjustment */
+  .sidebar-card {
+    position: static !important;
+    width: 100%;
+    margin-top: 2rem;
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Services Timeline Mobile alignment (prevents layout alignment center overflow bug) */
+  .process-flow {
+    grid-template-columns: 1fr !important;
+    gap: 3.5rem !important;
+    margin-top: 3rem !important;
+  }
+  .process-step {
+    text-align: left !important;
+    padding-left: 5.5rem !important;
+    position: relative !important;
+    min-height: 70px !important;
+  }
+  .process-number {
+    margin: 0 !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+  .process-step::after {
+    left: 30px !important;
+    top: 60px !important;
+    width: 1px !important;
+    height: calc(100% + 3.5rem - 60px) !important;
+    display: block !important;
+  }
+  .process-step:last-child::after {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Section Spacing adjustments */
+  .section {
+    padding: 4.5rem 0;
+  }
+  
+  /* About Page image gold border overflow fix */
+  .about-story-img::before {
+    top: 1rem !important;
+    left: -1rem !important;
+    right: 1rem !important;
+    bottom: -1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Filters Box layout tuning */
+  .filters-wrapper {
+    padding: 1.25rem !important;
+    margin-top: -2rem !important;
+  }
+  
+  /* Details Gallery Thumbnail responsive spacing */
+  .gallery-thumbs {
+    gap: 0.5rem !important;
+  }
+  
+  /* Timeline component details padding */
+  .timeline {
+    padding-left: 2rem !important;
+  }
+  .timeline-item::before {
+    left: -2rem !important;
+  }
+  
+  /* About Page extra small overflow fix */
+  .about-story-img::before {
+    top: 0.75rem !important;
+    left: -0.75rem !important;
+    right: 0.75rem !important;
+    bottom: -0.75rem !important;
+  }
+
+  /* Property Detail Headings scaling */
+  .details-title {
+    font-size: 2.25rem !important;
+  }
+  .details-price-tag {
+    font-size: 1.8rem !important;
+  }
+
+  /* Map Panel card responsive adjustments */
+  .map-card {
+    padding: 2rem 1.5rem !important;
+    margin: 0 1rem !important;
+    max-width: calc(100% - 2rem) !important;
+  }
+  .map-placeholder {
+    height: 400px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hero Typography scaling on tiny devices */
+  .hero-title {
+    font-size: 2.2rem !important;
+  }
+  .cta-title {
+    font-size: 2rem !important;
+  }
+  .cta-desc {
+    font-size: 1rem !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+/* Nav Overlay backdrop panel */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1002;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+}
+.nav-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
