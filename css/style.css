@@ -2487,6 +2487,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 992px) {
+  /* Hero Flex Column Stack Fix (Prevents side-by-side stats block squeezing on mobile) */
+  .hero {
+    flex-direction: column !important;
+    justify-content: center !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    padding: 8rem 0 0 0 !important;
+  }
+  .hero-content {
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  .hero-stats {
+    position: relative !important;
+    width: 100% !important;
+    margin-top: auto !important;
+  }
+
   /* Detail Page Sidebar stack adjustment */
   .sidebar-card {
     position: static !important;
