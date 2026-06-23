@@ -2516,10 +2516,22 @@ h1, h2, h3, h4, h5, h6 {
   }
   .hero-content {
     flex-grow: 0 !important;
-    margin-bottom: 140px !important; /* Space for absolute floating stats */
+    margin-bottom: 105px !important; /* Space for absolute floating stats on mobile */
     padding: 0 1.5rem !important;
     width: 100% !important;
     z-index: 2 !important;
+  }
+  .hero-title {
+    margin-bottom: 0.85rem !important;
+    font-size: 2.5rem !important;
+  }
+  .hero-subtitle {
+    margin-bottom: 1.75rem !important;
+    font-size: 1rem !important;
+  }
+  .btn {
+    padding: 0.85rem 1.75rem !important;
+    font-size: 0.8rem !important;
   }
   .hero-stats {
     position: absolute !important;
@@ -2531,14 +2543,14 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-    padding: 1.5rem 0 !important;
+    padding: 1.25rem 0 !important;
   }
   .stats-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1.25rem 1rem !important;
   }
   .stat-item h3 {
-    font-size: 1.8rem !important;
+    font-size: 1.7rem !important;
   }
   .stat-item p {
     font-size: 0.7rem !important;
